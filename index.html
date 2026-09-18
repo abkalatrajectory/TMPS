@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="topbar">
       <div class="brand">
         <span class="brand__logo">TMPS</span>
@@ -25,7 +26,7 @@
       </nav>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="hero">
         <div class="hero__content">
           <p class="eyebrow">Your one-stop travel booking platform</p>
@@ -51,6 +52,7 @@
                   name="from"
                   value="New Delhi"
                   placeholder="Enter departure city"
+                  autocomplete="address-level2"
                 />
               </label>
               <label>
@@ -60,6 +62,7 @@
                   name="to"
                   value="Dubai"
                   placeholder="Enter destination city"
+                  autocomplete="address-level2"
                 />
               </label>
               <label>
@@ -77,6 +80,7 @@
                   name="travellers"
                   value="2 Adults"
                   placeholder="e.g. 2 Adults"
+                  autocomplete="off"
                 />
               </label>
             </div>
