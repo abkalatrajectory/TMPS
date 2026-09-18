@@ -236,6 +236,10 @@ a {
   line-height: 1.7;
 }
 
+.support-section {
+  padding-top: 0;
+}
+
 .footer {
   padding: 0 0 2rem;
   color: #537089;
