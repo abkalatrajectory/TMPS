@@ -48,13 +48,7 @@
       const to = normalizeValue(params.get("to"), 40);
       const departure = normalizeValue(params.get("departure"), 20);
       const travellers = normalizeValue(params.get("travellers"), 30);
-      const tripType = normalizeValue(params.get("tripType"), 20);
       const summary = document.getElementById("results-summary");
-      const tripTypeLabel = {
-        flights: "flight",
-        hotels: "hotel",
-        packages: "package"
-      }[tripType] || "travel";
 
       const segments = [];
 
@@ -76,7 +70,7 @@
 
       if (segments.length) {
         summary.textContent =
-          "Showing sample " + tripTypeLabel + " options " + segments.join(", ") + ".";
+          "Showing sample flight options " + segments.join(", ") + ".";
       }
     </script>
   </body>

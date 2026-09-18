@@ -102,52 +102,10 @@ a {
   padding: 1.25rem;
 }
 
-.trip-types {
-  display: flex;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
-  border: 0;
-  padding: 0;
-  min-inline-size: 0;
-}
-
-.trip-types legend {
-  margin-bottom: 0.75rem;
-  font-weight: 700;
-  color: #28445d;
-}
-
-.trip-option span,
 .cta {
   border: 0;
   border-radius: 999px;
   font: inherit;
-}
-
-.trip-option input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  opacity: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-}
-
-.trip-option span {
-  display: inline-block;
-  padding: 0.7rem 1rem;
-  background: #edf4fb;
-  color: #33536f;
-  font-weight: 600;
-}
-
-.trip-option input:checked + span {
-  background: #0a66c2;
-  color: #ffffff;
 }
 
 .search-grid {
@@ -302,8 +260,7 @@ a {
     align-items: flex-start;
   }
 
-  .nav,
-  .trip-types {
+  .nav {
     flex-wrap: wrap;
   }
 
