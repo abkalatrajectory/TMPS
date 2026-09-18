@@ -43,11 +43,14 @@
             action="./search.html"
             method="get"
           >
-            <div class="trip-types">
-              <button type="button" class="trip-types__active">Flights</button>
-              <button type="button">Hotels</button>
-              <button type="button">Packages</button>
-            </div>
+            <fieldset class="trip-types">
+              <legend>Trip type</legend>
+              <button type="button" class="trip-types__active" aria-pressed="true">
+                Flights
+              </button>
+              <button type="button" aria-pressed="false">Hotels</button>
+              <button type="button" aria-pressed="false">Packages</button>
+            </fieldset>
             <div class="search-grid">
               <label>
                 From

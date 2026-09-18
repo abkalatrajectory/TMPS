@@ -46,17 +46,26 @@
       const travellers = params.get("travellers");
       const summary = document.getElementById("results-summary");
 
-      if (from && to && departure && travellers) {
-        summary.textContent =
-          "Showing sample travel options from " +
-          from +
-          " to " +
-          to +
-          " for " +
-          travellers +
-          " departing on " +
-          departure +
-          ".";
+      const segments = [];
+
+      if (from && to) {
+        segments.push("from " + from + " to " + to);
+      } else if (from) {
+        segments.push("from " + from);
+      } else if (to) {
+        segments.push("to " + to);
+      }
+
+      if (travellers) {
+        segments.push("for " + travellers);
+      }
+
+      if (departure) {
+        segments.push("departing on " + departure);
+      }
+
+      if (segments.length) {
+        summary.textContent = "Showing sample travel options " + segments.join(" ") + ".";
       }
     </script>
   </body>
