@@ -252,8 +252,7 @@ a {
   }
 
   .nav,
-  .trip-types,
-  .stats {
+  .trip-types {
     flex-wrap: wrap;
   }
 
