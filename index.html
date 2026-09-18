@@ -36,7 +36,7 @@
             support together in one place.
           </p>
 
-          <section class="search-card" id="discover" aria-label="Travel search">
+          <form class="search-card" id="discover" aria-label="Travel search">
             <div class="trip-types">
               <button type="button" class="trip-types__active">Flights</button>
               <button type="button">Hotels</button>
@@ -60,8 +60,8 @@
                 <input type="text" value="2 Adults" aria-label="Travellers" />
               </label>
             </div>
-            <button type="button" class="cta">Search Best Deals</button>
-          </section>
+            <button type="submit" class="cta">Search Best Deals</button>
+          </form>
         </div>
 
         <aside class="hero__panel" id="offers">
@@ -112,5 +112,11 @@
     <footer class="footer" id="support">
       <p>TMPS — your travel platform for easy trip planning and bookings.</p>
     </footer>
+
+    <script>
+      document.getElementById("discover").addEventListener("submit", function (event) {
+        event.preventDefault();
+      });
+    </script>
   </body>
 </html>
