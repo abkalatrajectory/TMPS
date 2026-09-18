@@ -117,23 +117,30 @@ a {
   color: #28445d;
 }
 
-.trip-types button,
+.trip-option span,
 .cta {
   border: 0;
   border-radius: 999px;
   font: inherit;
 }
 
-.trip-types button {
+.trip-option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.trip-option span {
+  display: inline-block;
   padding: 0.7rem 1rem;
   background: #edf4fb;
   color: #33536f;
   font-weight: 600;
 }
 
-.trip-types__active {
-  background: #0a66c2 !important;
-  color: #ffffff !important;
+.trip-option input:checked + span {
+  background: #0a66c2;
+  color: #ffffff;
 }
 
 .search-grid {
