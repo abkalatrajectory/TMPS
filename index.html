@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TMPS | Travel Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand__logo">TMPS</span>
+        <span class="brand__tag">Travel Made Personal & Simple</span>
+      </div>
+      <nav class="nav">
+        <a href="#discover">Discover</a>
+        <a href="#offers">Offers</a>
+        <a href="#support">Support</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero__content">
+          <p class="eyebrow">Your one-stop travel booking platform</p>
+          <h1>Plan flights, stays, and holidays with ease.</h1>
+          <p class="hero__text">
+            TMPS is a travel platform inspired by the convenience of services
+            like MakeMyTrip—bringing flights, hotels, holiday packages, and
+            support together in one place.
+          </p>
+
+          <form class="search-card" id="discover">
+            <div class="trip-types">
+              <button type="button" class="trip-types__active">Flights</button>
+              <button type="button">Hotels</button>
+              <button type="button">Packages</button>
+            </div>
+            <div class="search-grid">
+              <label>
+                From
+                <input type="text" value="New Delhi" aria-label="Departure city" />
+              </label>
+              <label>
+                To
+                <input type="text" value="Dubai" aria-label="Destination city" />
+              </label>
+              <label>
+                Departure
+                <input type="date" value="2026-10-05" aria-label="Departure date" />
+              </label>
+              <label>
+                Travellers
+                <input type="text" value="2 Adults" aria-label="Travellers" />
+              </label>
+            </div>
+            <button type="submit" class="cta">Search Best Deals</button>
+          </form>
+        </div>
+
+        <aside class="hero__panel" id="offers">
+          <div class="panel-card">
+            <p class="panel-card__label">Top Offer</p>
+            <h2>Save up to 25% on festive getaways</h2>
+            <p>Exclusive flight + hotel bundles for Dubai, Bali, and Goa.</p>
+          </div>
+          <div class="stats">
+            <div>
+              <strong>120+</strong>
+              <span>Destinations</span>
+            </div>
+            <div>
+              <strong>24/7</strong>
+              <span>Traveller Support</span>
+            </div>
+            <div>
+              <strong>4.8/5</strong>
+              <span>Customer Rating</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section">
+        <div class="section__heading">
+          <p class="eyebrow">Why travellers choose TMPS</p>
+          <h2>Everything you need to book your next journey</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>Flight Bookings</h3>
+            <p>Compare fares and book domestic or international flights.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Hotel Stays</h3>
+            <p>Find stays that fit every budget, from business to luxury.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Holiday Packages</h3>
+            <p>Choose curated itineraries for family vacations and quick breaks.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="support">
+      <p>TMPS — your travel platform for easy trip planning and bookings.</p>
+    </footer>
+  </body>
+</html>
