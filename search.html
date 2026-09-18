@@ -39,12 +39,16 @@
     </main>
 
     <script>
+      function normalizeValue(value, maxLength) {
+        return (value || "").trim().slice(0, maxLength);
+      }
+
       const params = new URLSearchParams(window.location.search);
-      const from = params.get("from");
-      const to = params.get("to");
-      const departure = params.get("departure");
-      const travellers = params.get("travellers");
-      const tripType = params.get("tripType");
+      const from = normalizeValue(params.get("from"), 40);
+      const to = normalizeValue(params.get("to"), 40);
+      const departure = normalizeValue(params.get("departure"), 20);
+      const travellers = normalizeValue(params.get("travellers"), 30);
+      const tripType = normalizeValue(params.get("tripType"), 20);
       const summary = document.getElementById("results-summary");
       const tripTypeLabel = {
         flights: "flight",
