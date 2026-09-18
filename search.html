@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TMPS | Search Results</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="results-page">
+      <section class="results-card">
+        <p class="eyebrow">Search submitted</p>
+        <h1>TMPS travel search results</h1>
+        <p class="results-summary" id="results-summary">
+          Showing a sample travel search experience for your selected journey.
+        </p>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>Morning Flight</h3>
+            <p>Non-stop fare with complimentary meal and cabin baggage.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Hotel Bundle</h3>
+            <p>4-star stay with breakfast and airport transfer included.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Holiday Add-on</h3>
+            <p>City tour, visa assistance, and local support for your trip.</p>
+          </article>
+        </div>
+        <p><a class="cta cta--inline" href="./index.html">Back to homepage</a></p>
+      </section>
+    </main>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const from = params.get("from");
+      const to = params.get("to");
+      const departure = params.get("departure");
+      const travellers = params.get("travellers");
+      const summary = document.getElementById("results-summary");
+
+      if (from && to && departure && travellers) {
+        summary.textContent =
+          "Showing sample travel options from " +
+          from +
+          " to " +
+          to +
+          " for " +
+          travellers +
+          " departing on " +
+          departure +
+          ".";
+      }
+    </script>
+  </body>
+</html>

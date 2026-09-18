@@ -36,7 +36,13 @@
             support together in one place.
           </p>
 
-          <form class="search-card" id="discover" aria-label="Travel search">
+          <form
+            class="search-card"
+            id="discover"
+            aria-label="Travel search"
+            action="./search.html"
+            method="get"
+          >
             <div class="trip-types">
               <button type="button" class="trip-types__active">Flights</button>
               <button type="button">Hotels</button>
@@ -45,19 +51,39 @@
             <div class="search-grid">
               <label>
                 From
-                <input type="text" value="New Delhi" aria-label="Departure city" />
+                <input
+                  type="text"
+                  name="from"
+                  value="New Delhi"
+                  aria-label="Departure city"
+                />
               </label>
               <label>
                 To
-                <input type="text" value="Dubai" aria-label="Destination city" />
+                <input
+                  type="text"
+                  name="to"
+                  value="Dubai"
+                  aria-label="Destination city"
+                />
               </label>
               <label>
                 Departure
-                <input type="date" value="2026-10-05" aria-label="Departure date" />
+                <input
+                  type="date"
+                  name="departure"
+                  value="2026-10-05"
+                  aria-label="Departure date"
+                />
               </label>
               <label>
                 Travellers
-                <input type="text" value="2 Adults" aria-label="Travellers" />
+                <input
+                  type="text"
+                  name="travellers"
+                  value="2 Adults"
+                  aria-label="Travellers"
+                />
               </label>
             </div>
             <button type="submit" class="cta">Search Best Deals</button>
@@ -112,11 +138,5 @@
     <footer class="footer" id="support">
       <p>TMPS — your travel platform for easy trip planning and bookings.</p>
     </footer>
-
-    <script>
-      document.getElementById("discover").addEventListener("submit", function (event) {
-        event.preventDefault();
-      });
-    </script>
   </body>
 </html>
