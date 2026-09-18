@@ -44,7 +44,13 @@
       const to = params.get("to");
       const departure = params.get("departure");
       const travellers = params.get("travellers");
+      const tripType = params.get("tripType");
       const summary = document.getElementById("results-summary");
+      const tripTypeLabel = {
+        flights: "flight",
+        hotels: "hotel",
+        packages: "package"
+      }[tripType] || "travel";
 
       const segments = [];
 
@@ -66,7 +72,7 @@
 
       if (segments.length) {
         summary.textContent =
-          "Showing sample travel options " + segments.join(", ") + ".";
+          "Showing sample " + tripTypeLabel + " options " + segments.join(", ") + ".";
       }
     </script>
   </body>
